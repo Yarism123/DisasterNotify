@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/receivedText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="수신된 데이터가 여기에 표시됩니다."
+        android:padding="16dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/receivedText"
+        android:hint="보낼 메시지를 입력하세요."
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputText"
+        android:text="보내기"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp" />
+
+    <!-- 블루투스 이름을 표시할 TextView 추가 -->
+    <TextView
+        android:id="@+id/bluetoothNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sendButton"
+        android:layout_marginTop="-1dp"
+        android:padding="16dp"
+        android:text="연결된 블루투스: 없음"
+        android:textSize="16sp" />
+
+</RelativeLayout>
+
