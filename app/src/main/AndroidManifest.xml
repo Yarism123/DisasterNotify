@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- 블루투스 권한 추가 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!--블루투스 권한-->
@@ -31,6 +30,11 @@
             </intent-filter>
         </activity>
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDhuA5h9F1a3SypBLrC6WboTFBojE250l0" />
+
         <activity android:name=".blueToothTest.BlueToothActivity"/>
+        <activity android:name=".gpsTest.GpsActivity"/>
     </application>
 </manifest>

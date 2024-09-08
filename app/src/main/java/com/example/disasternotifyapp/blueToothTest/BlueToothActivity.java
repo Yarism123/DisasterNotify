@@ -2,7 +2,6 @@ package com.example.disasternotifyapp.blueToothTest;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,8 +31,6 @@ import java.util.UUID;
 
 public class BlueToothActivity extends AppCompatActivity {
     private final String TAG = this.getClass().getSimpleName(); // log
-    private static final int REQUEST_CODE_BLUETOOTH_CONNECT = 1;
-    private static final int REQUEST_ENABLE_BT = 10; // 블루투스 활성화 상태
     private BluetoothAdapter bluetoothAdapter; // 블루투스 어댑터
     private Set<BluetoothDevice> devices; // 블루투스 디바이스 데이터 셋
     private BluetoothDevice bluetoothDevice; // 블루투스 디바이스
@@ -54,7 +51,7 @@ public class BlueToothActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bluetooth2);
+        setContentView(R.layout.activity_bluetooth);
         Log.d(TAG, "BlueToothActivity2가 생성되었습니다.");
 
 //        // 권한 요청 및 블루투스 설정
@@ -261,10 +258,4 @@ public class BlueToothActivity extends AppCompatActivity {
             }
         }
     }
-
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//        permissionCheck.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//    }
 }

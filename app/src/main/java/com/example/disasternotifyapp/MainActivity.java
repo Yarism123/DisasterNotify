@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.disasternotifyapp.blueToothTest.BlueToothActivity;
+import com.example.disasternotifyapp.gpsTest.GpsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,16 +20,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        // 권한 요청 및 블루투스 설정
+        permissionCheck = new PermissionCheck(this);
+        permissionCheck.requestPermissions();
 
-        Button sendButton = findViewById(R.id.btn1);
-        sendButton.setOnClickListener(v -> {
+
+        Button btn1 = findViewById(R.id.btn1);
+        btn1.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, BlueToothActivity.class);
             startActivity(intent);
         });
 
-        // 권한 요청 및 블루투스 설정
-        permissionCheck = new PermissionCheck(this);
-        permissionCheck.requestPermissions();
+        Button btn2 = findViewById(R.id.btn2);
+        btn2.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, GpsActivity.class);
+            startActivity(intent);
+        });
+
     }
 
     @Override

@@ -10,4 +10,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="블루투스 테스트"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gps 테스트"/>
 </LinearLayout>
